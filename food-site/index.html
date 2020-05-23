@@ -1,0 +1,880 @@
+<!-- check document in HTML validator after completing work on it -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Кулинарные рецепты на сайте &#171;Еда&#187;</title> <!-- Avoid special characters when possible -->
+	<meta name="description" content="Кулинарные рецепты для вашей кухни">
+	<meta property="og:title" content="Еда">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.">
+	<meta property="og:image" content="images/logo.png">
+	<meta property="og:image:alt" content="Слово Еда">
+	<meta property="og:description" content="Данный вебсайт предоставляет изумительные кулинарные рецепты для вашей кухни.">
+	<meta property="og:locale" content="ru_AZ">
+	<meta property="og:site_name" content="Еда">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<!-- fonts above css, just like that (just for remebering, don't edit) -->
+	<link rel="stylesheet" href="styles/css-food.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<!-- reconsider overall semantic structure and divs, because the divs must be as few as possible -->
+	<!-- Use divs for layout purposes -->
+	<!-- Search engines also read image filenames and count them towards SEO. Therefore, you should give your image a descriptive filename; dinosaur.jpg is better than img835.png. -->
+	<!-- If the image was in an images subdirectory, which was inside the same directory as the HTML page (which Google recommends for SEO/indexing purposes) -->
+	<div id="wrapper">
+	    <header>
+	    	<h1 id="logo">
+	    		<a href="#">
+	    			<img src="images/logo.png" alt="Логотип текущего вебсайта: Еда" width="64">
+	    		</a>
+	    	</h1>
+	    	<nav>
+	    		<ul>
+	    			<li><a href="#">РЕЦЕПТЫ</a></li>
+	    			<li><a href="#">ПРОДУКТЫ</a></li>
+	    			<li><a href="#">КАК ПРИГОТОВИТЬ</a></li>
+	    			<li><a href="#">КУЛИНАРНАЯ КНИГА</a></li>
+	    			<li><a href="#">ЗДОРОВЬЕ</a></li>
+	    			<li><a href="#">АВТОРЫ</a></li>
+	    		</ul>
+	    	</nav>
+	    	<ul id="language">
+	    		<li><a href="#" class="active">RU</a></li>
+	    		<li><a href="#">EN</a></li>
+	    	</ul>
+	    	<ul class="social_networks">
+	    		<li>
+	    			<a href="#">
+	    				<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">
+	    				<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">
+	    				<img src="images/instagram.png" alt="Логотип Инстаграм: фотокамера" width="13">
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">
+	    				<img src="images/google-plus.png" alt="Логотип Гугл Плюс" width="11">
+	    			</a>
+	    		</li>
+	    	</ul>
+	    </header>
+	    <section id="search_and_account">
+	    	<section id="search">
+		    	<form action="" method="">
+		    		<input type="text" name="search" id="search_input" placeholder="Search...">
+		    		<div></div>
+		    	</form>
+	    	</section>
+	    	<section id="account">
+	    		<div id="notification">
+	    			<img src="images/bell.png" alt="Знак уведомления: колокольчик" height="16">
+	    			<div></div>
+	    		</div>
+	    		<div>
+	    			<img src="images/sign-in.png" alt="Знак аккаунта: человек в профиль" height="16">
+	    		</div>
+	    	</section>
+	    </section>
+	    <section id="recipe_selection_and_ideas">
+	    	<div>
+	    		<hr>
+	    		<img src="images/branch-separator.png" alt="" width="50">
+	    		<hr>
+	    	</div>
+	    	<section id="recipe_selection">
+	    		<h2>ПОДБОР РЕЦЕПТОВ</h2>
+	    		<div>
+			    	<div>
+			    		<div class="show-hide-list">
+			    			<div>Любая категория</div>
+			    			<ul class="hidden">
+			    				<li>Любая категория</li>
+			    				<li>Заготовки</li>
+			    				<li>Выпечка и десерты</li>
+			    				<li>Основные блюда</li>
+			    				<li>Завтраки</li>
+			    				<li>Салаты</li>
+			    				<li>Супы</li>
+			    				<li>Паста и пицца</li>
+			    				<li>Закуски</li>
+			    				<li>Сэндвичи</li>
+			    				<li>Ризотто</li>
+			    				<li>Напитки</li>
+			    				<li>Соусы и маринады</li>
+			    				<li>Бульоны</li>
+			    			</ul>
+			    		</div>
+			    		<div class="show-hide-list">
+			    			<div>Любое блюдо</div>
+			    			<ul class="hidden">
+			    				<li>Любое блюдо</li>
+			    				<li>Баклажанная икра</li>
+			    				<li>Бастурма</li>
+			    				<li>Горячие закуски</li>
+			    				<li>Гуакамоле</li>
+			    				<li>Дип</li>
+			    				<li>Закусочные торты</li>
+			    				<li>Заливное</li>
+			    				<li>Кабачковая икра</li>
+			    				<li>Канапе</li>
+			    				<li>Карпаччо</li>
+			    				<li>Кесадилья</li>
+			    				<li>Лечо</li>
+			    				<li>Лобио</li>
+			    				<li>Паштеты</li>
+			    				<li>Сациви</li>
+			    				<li>Сырное фондю</li>
+			    				<li>Такос</li>
+			    				<li>Форшмак</li>
+			    				<li>Фриттата</li>
+			    				<li>Холодец</li>
+			    				<li>Хумус</li>
+			    				<li>Чипсы</li>
+			    			</ul>
+			    		</div>
+			    		<div class="show-hide-list">
+			    			<div>Любая кухня</div>
+			    			<ul class="hidden">
+			    				<li>Любая кухня</li>
+			    				<li>Китайская</li>
+			    				<li>Мексиканская</li>
+			    				<li>Грузинская</li>
+			    				<li>Французская</li>
+			    				<li>Японская</li>
+			    				<li>Индийская</li>
+			    				<li>Русская</li>
+			    				<li>Средиземноморская</li>
+			    				<li>Узбекская</li>
+			    				<li>Тайская</li>
+			    				<li>Кухня Вестероса</li>
+			    				<li>Итальянская</li>
+			    				<li>Испанская</li>
+			    			</ul>
+			    		</div>
+			    		<div class="show-hide-list">
+			    			<div>Любое меню</div>
+			    			<ul class="hidden">
+			    				<li>Любое меню</li>
+			    				<li>Вегетаринская еда</li>
+			    				<li>Веганская еда</li>
+			    				<li>Детское меню</li>
+			    				<li>Низкокалорийная еда</li>
+			    				<li>Постная еда</li>
+			    				<li>Меню при диабете</li>
+			    			</ul>
+			    		</div>
+			    		<div class="show-hide-list">
+			    			<div>Сложность</div>
+			    			<ul class="hidden">
+			    				<li>Низкая</li>
+			    				<li>Средняя</li>
+			    				<li>Высокая</li>
+			    			</ul>
+			    		</div>
+			    	</div>
+			    	<div>
+			    		<div id="ingredients_details-btn">Ингредиенты, детали</div>
+			    		<div id="pick_recipes-btn">
+			    			<a href="#">Подобрать рецепты</a>
+			    		</div>
+			    	</div>
+			    </div>
+		    </section>
+		    <section id="ideas">
+		    	<div class="main_meal">
+		    		<div>
+			    		<div>БЛЮДО ДНЯ</div>
+			    		<div>КУРИНЫЕ НОЖКИ НА ГРИЛЕ</div>
+			    		<img src="images/fork-spoon-symbol.png" alt="" width="126" class="fork_spoon-symbol">
+		    		</div>
+		    		<div></div>
+				</div>
+		    	<div class="main_meal">
+		    		<div>
+		    			<div>ЛУЧШИЕ РЕЦЕПТЫ НЕДЕЛИ</div>
+		    			<div>7 ЛУЧШИХ РЕЦЕПТОВ НЕДЕЛИ</div>
+		    			<img src="images/fork-spoon-symbol.png" alt="" width="126" class="fork_spoon-symbol">
+		    		</div>
+		    		<div></div>
+		    	</div>
+		    	<div>
+		    		<div>
+						<div class="healthy">
+							<div>
+			    				<img src="images/chef-hat.png" alt="Поварской колпак" width="19">
+		    					<span>ПОЛЕЗНОЕ</span>							
+							</div>
+						</div>
+		    			<div>КАК ПРИГОТОВИТЬ ПИРОГ В ОДНОЙ ПОСУДЕ 5 РЕЦЕПТОВ ?</div>
+		    		</div>
+		    		<div></div>
+		    	</div>
+		    	<div>
+		    		<div>
+		    			<div class="healthy">
+		    				<div>
+			    				<img src="images/chef-hat.png" alt="Поварской колпак" width="19">
+		    					<span>ПОЛЕЗНОЕ</span>	    					
+		    				</div>
+		    			</div>
+		    			<div>КАК ПРИГОТОВИТЬ СЫРНЫЙ ТОРТ С ОВОЩАМИ ?</div>
+		    		</div>
+		    		<div></div>
+		    	</div>
+		    	<div>
+		    		<div>
+		    			<div class="healthy">
+		    				<div>
+			    				<img src="images/chef-hat.png" alt="Поварской колпак" width="19">
+		    					<span>ПОЛЕЗНОЕ</span>	    					
+		    				</div>
+		    			</div>
+		    			<div>10 ПРОСТЫХ НАПИТКОВ В ЖАРУ</div>
+		    		</div>
+		    		<div></div>
+		    	</div>
+		    	<div>
+		    		<div>
+		    			<div class="healthy">
+		    				<div>
+		    					<img src="images/chef-hat.png" alt="Поварской колпак" width="19">
+		    					<span>ПОЛЕЗНОЕ</span>		    					
+		    				</div>
+		    			</div>
+		    			<div>ЧТО ТАКОЕ МЕД ?</div>
+		    		</div>
+		    		<div></div>
+		    	</div>
+		    	<div>
+		    		<div>
+		    			<div class="healthy">
+		    				<div>
+		    					<img src="images/chef-hat.png" alt="Поварской колпак" width="19">
+		    					<span>ПОЛЕЗНОЕ</span>
+		    				</div>
+		    			</div>
+		    			<div>КАК ПРАВИЛЬНО ЗАМЕСИТЬ ДРОЖЕВОЕ ТЕСТО ?</div>	
+		    		</div>
+		    		<div></div>
+		    	</div>
+		    	<div>
+		    		<div>
+		    			<div class="healthy">
+		    				<div>
+		    					<img src="images/chef-hat.png" alt="Поварской колпак" width="19">
+		    					<span>ПОЛЕЗНОЕ</span>
+		    				</div>
+		    			</div>
+		    			<div>ЧЕЛОВЕК, КОТОРЫЙ ДЕЛАЕТ ЛУЧШИЕ МИТБОЛЫ В БЕЛЬГИИ</div>
+		    		</div>
+		    		<div></div>
+		    	</div>
+		    </section>
+	    </section>
+	    <main id="recipes">
+	    	<div>
+	    		<hr>
+	    		<img src="images/branch-separator.png" alt="" width="50">
+	    		<hr>
+	    	</div>
+	    	<section>
+	    		<h2>РЕЦЕПТЫ</h2>
+	    		<div>
+	    			<ul class="main_section_options">
+	    				<li><a href="#">Новые рецепты</a></li>
+	    				<li><a href="#">Популярные</a></li>
+	    				<li><a href="#">Рекомендуем</a></li>
+	    			</ul>
+	    			<div>
+	    				<div>
+	    					<img src="images/utinie-nojki-s-ovoshami-i-qrudinkoy.png" alt="Утиные ножки с овощами и грудинкой" width="267">
+	    					<div>
+		    					<h3>Утиные ножки с овощами и грудинкой</h3>
+		    					<div>
+		    						<div>
+		    							<img src="images/135-min.png" alt="Часы" width="17">
+		    							<span>135 мин</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/slojno.png" alt="Поварской колпак" width="17">
+		    							<span>Сложно</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/125-kkal.png" alt="Бегущий человек" width="14">
+		    							<span>125 ккал</span>
+		    						</div>
+		    					</div>
+		    					<p>говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец чёрный, зелень петрушки...</p>
+		    					<div>
+		    						<div>
+		    							<img src="images/heart.png" alt="Символ сердца для указания &laquo;Нравится&raquo;" width="19">
+		    							<span>16</span>
+		    						</div>
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/instagram.png" alt="Логотип Интстаграм: фотокамера" width="13">
+											</a>
+										</li>
+									</ul>
+		    					</div>		    						    				
+		    				</div>
+	    				</div>
+	    				<div>
+	    					<img src="images/salat-iz-svekli-s-sirom-i-myodom.png" alt="Салат из свеклы с козьим сыром и медовой заправкой" width="267">
+	    					<div>
+	    						<h3>Салат из свеклы с козьим сыром и медовой заправкой</h3>
+	    						<div>
+		    						<div>
+		    							<img src="images/135-min.png" alt="Часы" width="17">
+		    							<span>35 мин</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/slojno.png" alt="Поварской колпак" width="17">
+		    							<span>Сложно</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/125-kkal.png" alt="Бегущий человек" width="14">
+		    							<span>125 ккал</span>
+		    						</div>
+		    					</div>
+		    					<p>говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель</p>
+		    					<div>
+		    						<div>
+		    							<img src="images/heart.png" alt="Символ сердца для указания &laquo;Нравится&raquo;" width="19">
+		    							<span>16</span>
+		    						</div>
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/instagram.png" alt="Логотип Интстаграм: фотокамера" width="13">
+											</a>
+										</li>
+									</ul>
+		    					</div>	
+	    					</div>
+	    				</div>
+	    				<div>
+	    					<img src="images/amerikanski-tikveni-piroq-s-koricey.png" alt="Американский тыквенный пирог с корицей" width="267">
+	    					<div>
+	    						<h3>Американский тыквенный пирог с корицей</h3>
+								<div>
+		    						<div>
+		    							<img src="images/135-min.png" alt="Часы" width="17">
+		    							<span>240 мин</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/slojno.png" alt="Поварской колпак" width="17">
+		    							<span>Сложно</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/125-kkal.png" alt="Бегущий человек" width="14">
+		    							<span>125 ккал</span>
+		    						</div>
+		    					</div>
+		    					<p>лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец чёрный, зелень петрушки...</p>
+		    					<div>
+		    						<div>
+		    							<img src="images/heart.png" alt="Символ сердца для указания &laquo;Нравится&raquo;" width="19">
+		    							<span>16</span>
+		    						</div>
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/instagram.png" alt="Логотип Интстаграм: фотокамера" width="13">
+											</a>
+										</li>
+									</ul>
+		    					</div>	
+	    					</div>
+	    				</div>
+	    				<div>
+	    					<img src="images/sezar-s-fasolyu.png" alt="Салат &laquo;Цезарь&raquo; традиционный с фасолью" width="267">
+	    					<div>
+	    						<h3>Салат &laquo;Цезарь&raquo; традиционный с фасолью</h3>
+								<div>
+		    						<div>
+		    							<img src="images/135-min.png" alt="Часы" width="17">
+		    							<span>107 мин</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/slojno.png" alt="Поварской колпак" width="17">
+		    							<span>Сложно</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/125-kkal.png" alt="Бегущий человек" width="14">
+		    							<span>125 ккал</span>
+		    						</div>
+		    					</div>
+		    					<p>говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец чёрный</p>
+		    					<div>
+		    						<div>
+		    							<img src="images/heart.png" alt="Символ сердца для указания &laquo;Нравится&raquo;" width="19">
+		    							<span>16</span>
+		    						</div>
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/instagram.png" alt="Логотип Интстаграм: фотокамера" width="13">
+											</a>
+										</li>
+									</ul>
+		    					</div>	
+	    					</div>
+	    				</div>
+	    				<div>
+	    					<img src="images/sote-iz-kapusti-s-okorokom.png" alt="Соте из брюссельской капусты с варено-копченым окороком" width="267">
+	    					<div>
+	    						<h3>Соте из брюссельской капусты с варено-копченым окороком</h3>
+	    						<div>
+		    						<div>
+		    							<img src="images/135-min.png" alt="Часы" width="17">
+		    							<span>135 мин</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/slojno.png" alt="Поварской колпак" width="17">
+		    							<span>Сложно</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/125-kkal.png" alt="Бегущий человек" width="14">
+		    							<span>125 ккал</span>
+		    						</div>
+		    					</div>
+		    					<p>говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец чёрный, зелень петрушки...</p>
+		    					<div>
+		    						<div>
+		    							<img src="images/heart.png" alt="Символ сердца для указания &laquo;Нравится&raquo;" width="19">
+		    							<span>16</span>
+		    						</div>
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/instagram.png" alt="Логотип Интстаграм: фотокамера" width="13">
+											</a>
+										</li>
+									</ul>
+		    					</div>	
+	    					</div>
+	    				</div>
+	    				<div>
+	    					<img src="images/jareni-baklajani-s-pomidorami.png" alt="Жареные баклажаны с помидорами" width="267">
+	    					<div>
+	    						<h3>Жареные баклажаны с помидорами</h3>
+	    						<div>
+		    						<div>
+		    							<img src="images/135-min.png" alt="Часы" width="17">
+		    							<span>35 мин</span>
+		    						</div>
+		    						<div> 
+		    							<img src="images/slojno.png" alt="Поварской колпак" width="17">
+		    							<span>Сложно</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/125-kkal.png" alt="Бегущий человек" width="14">
+		    							<span>125 ккал</span>
+		    						</div>
+		    					</div>
+		    					<p>говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель</p>
+		    					<div>
+		    						<div>
+		    							<img src="images/heart.png" alt="Символ сердца для указания &laquo;Нравится&raquo;" width="19">
+		    							<span>16</span>
+		    						</div>
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/instagram.png" alt="Логотип Интстаграм: фотокамера" width="13">
+											</a>
+										</li>
+									</ul>
+		    					</div>	
+	    					</div>
+	    				</div>
+	    				<div>
+	    					<img src="images/navaren-iz-qovyadini.png" alt="Наварен из говядины" width="267">
+	    					<div>
+	    						<h3>Наварен из говядины</h3>
+	    						<div>
+		    						<div>
+		    							<img src="images/135-min.png" alt="Часы" width="17">
+		    							<span>240 мин</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/slojno.png" alt="Поварской колпак" width="17">
+		    							<span>Сложно</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/125-kkal.png" alt="Бегущий человек" width="14">
+		    							<span>125 ккал</span>
+		    						</div>
+		    					</div>
+		    					<p>лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец чёрный, зелень петрушки...</p>
+		    					<div>
+		    						<div>
+		    							<img src="images/heart.png" alt="Символ сердца для указания &laquo;Нравится&raquo;" width="19">
+		    							<span>16</span>
+		    						</div>
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/instagram.png" alt="Логотип Интстаграм: фотокамера" width="13">
+											</a>
+										</li>
+									</ul>
+		    					</div>	
+	    					</div>
+	    				</div>
+	    				<div>
+	    					<img src="images/kapusta-s-belim-sousom-s-sirom.png" alt="Брюссельская капуста с белым соусом с сыром" width="267">
+	    					<div>
+	    						<h3>Брюссельская капуста с белым соусом с сыром</h3>
+	    						<div>
+		    						<div>
+		    							<img src="images/135-min.png" alt="Часы" width="17">
+		    							<span>107 мин</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/slojno.png" alt="Поварской колпак" width="17">
+		    							<span>Сложно</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/125-kkal.png" alt="Бегущий человек" width="14">
+		    							<span>125 ккал</span>
+		    						</div>
+		    					</div>
+		    					<p>говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец чёрный</p>
+		    					<div>
+		    						<div>
+		    							<img src="images/heart.png" alt="Символ сердца для указания &laquo;Нравится&raquo;" width="19">
+		    							<span>16</span>
+		    						</div>
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/instagram.png" alt="Логотип Интстаграм: фотокамера" width="13">
+											</a>
+										</li>
+									</ul>
+		    					</div>	
+	    					</div>
+	    				</div>
+	    				<div>
+	    					<img src="images/pechenochni-tort-s-morkovyu-i-lukom.png" alt="Печеночный торт с морковью и луком" width="267">
+	    					<div>
+	    						<h3>Печеночный торт с морковью и луком</h3>
+	    						<div>
+		    						<div>
+		    							<img src="images/135-min.png" alt="Часы" width="17">
+		    							<span>240 мин</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/slojno.png" alt="Поварской колпак" width="17">
+		    							<span>Сложно</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/125-kkal.png" alt="Бегущий человек" width="14">
+		    							<span>125 ккал</span>
+		    						</div>
+		    					</div>
+		    					<p>лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец чёрный, зелень петрушки...</p>
+		    					<div>
+		    						<div>
+		    							<img src="images/heart.png" alt="Символ сердца для указания &laquo;Нравится&raquo;" width="19">
+		    							<span>16</span>
+		    						</div>
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/instagram.png" alt="Логотип Интстаграм: фотокамера" width="13">
+											</a>
+										</li>
+									</ul>
+		    					</div>	
+	    					</div>
+	    				</div>
+	    				<div>
+	    					<img src="images/krabovi-salat-s-oqurcom-i-midiyami.png" alt="Классический крабовый салат с огурцом и мидиями" width="267">
+	    					<div>
+	    						<h3>Классический крабовый салат с огурцом и мидиями</h3>
+	    						<div>
+		    						<div>
+		    							<img src="images/135-min.png" alt="Часы" width="17">
+		    							<span>107 мин</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/slojno.png" alt="Поварской колпак" width="17">
+		    							<span>Сложно</span>
+		    						</div>
+		    						<div>
+		    							<img src="images/125-kkal.png" alt="Бегущий человек" width="14">
+		    							<span>125 ккал</span>
+		    						</div>
+		    					</div>
+		    					<p>говядина, масло топлёное, лук репчатый, морковь, редька, перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль</p>
+		    					<div>
+		    						<div>
+		    							<img src="images/heart.png" alt="Символ сердца для указания &laquo;Нравится&raquo;" width="19">
+		    							<span>16</span>
+		    						</div>
+									<ul>
+										<li>
+											<a href="#">
+												<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="images/instagram.png" alt="Логотип Интстаграм: фотокамера" width="13">
+											</a>
+										</li>
+									</ul>
+		    					</div>	
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>	
+	    	</section>
+	    </main>
+	    <section id="hotselection">
+	    	<div>
+	    		<hr>
+	    		<img src="images/branch-separator.png" alt="" width="50">
+	    		<hr>
+	    	</div>
+	    	<section>
+	    		<h2>#ГОРЯЧАЯПОДБОРКА</h2>
+	    		<div>
+		    		<div>
+		    			<div>
+		    				<div>ПОХМЕЛЬНЫЕ РЕЦЕПТЫ</div>
+		    			</div>
+		    			<div></div>
+		    		</div>
+		    		<div>
+		    			<div>
+		    				<div>МАСЛЕНИЦА</div>
+		    			</div>
+		    			<div></div>
+		    		</div>
+		    		<div>
+		    			<div>
+		    				<div>РЕЦЕПТЫ ДЛЯ ДЕТЕЙ</div>
+		    			</div>
+		    			<div></div>
+		    		</div>
+		    		<div>
+		    			<div>
+		    				<div>ЗДОРОВОЕ ПИТАНИЕ</div>
+		    			</div>
+		    			<div></div>
+		    		</div>
+		    	</div>
+	    	</section>
+	    </section>
+	    <aside id="top_authors">
+	    	<section>
+	    		<h2>ТОП АВТОРОВ</h2>
+	    		<ul>
+					<li>
+						<a href="#">
+							<img src="images/top-author-1.png" alt="Топ-автор" width="53">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/top-author-2.png" alt="Топ-автор" width="53">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/top-author-3.png" alt="Топ-автор" width="53">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/top-author-4.png" alt="Топ-автор" width="53">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/top-author-5.png" alt="Топ-автор" width="53">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/top-author-6.png" alt="Топ-автор" width="53">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/top-author-7.png" alt="Топ-автор" width="53">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/top-author-8.png" alt="Топ-автор" width="53">
+						</a>
+					</li>
+	    		</ul>
+	    	</section>
+	    </aside>
+	    <section id="subscription">
+	    	<form action="" method="">
+	    		<h2>ПОДПИШИТЕСЬ НА РАССЫЛКУ РЕЦЕПТОВ И СОВЕТОВ</h2>
+	    		<p>
+	    			<input type="email" name="user_mail" placeholder="Адрес электронной почты">
+					<button type="submit"></button>	    				
+	    		</p>
+	    	</form>
+	    </section>
+		<footer>
+			<ul>
+				<li><a href="#">ГЛАВНАЯ</a></li>
+				<li><a href="#">РЕЦЕПТЫ</a></li>
+				<li><a href="#">ИДЕИ</a></li>
+				<li><a href="#">ЖУРНАЛ</a></li>
+				<li><a href="#">АВТОРЫ</a></li>
+				<li><a href="#">РЕКЛАМА</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+	    	<ul class="social_networks">
+	    		<li>
+	    			<a href="#">
+	    				<img src="images/vk.png" alt="Логотип ВКонтакте" width="15">
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">
+	    				<img src="images/fb.png" alt="Логотип Фейсбук" width="6">
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">
+	    				<img src="images/instagram.png" alt="Логотип Инстаграм: фотокамера" width="13">
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="">
+	    				<img src="images/google-plus.png" alt="Логотип Гугл Плюс" width="11">
+	    			</a>
+	    		</li>
+	    	</ul>
+		</footer>
+	</div>
+	<script src="scripts/js-script.js"></script>
+</body>
+</html>

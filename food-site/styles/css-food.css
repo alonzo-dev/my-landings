@@ -1,0 +1,1153 @@
+/* check stylesheet in CSS validator after completing work on it */
+
+/* Need for comments for sections and special parts */
+
+/* Long combinator selectors below need to be removed and 
+   replaced by other selectors, e.g. class selectors */
+
+/* For background property - A background-color may only be specified 
+   after the final comma. */
+
+/* If specifying an image, and text will be placed on top of that image, 
+   you should also specify a background-color 
+   that will allow the text to be legible if the image does not load. */
+
+/* Any important content should be part of the HTML page 
+   and not contained in a background.*/
+
+/* Multiple writing modes - not in this website project (just for remembering)*/
+
+/* Test your work to make sure 
+   you do not accidentally cause problematic overflow */
+
+/* You can mix and match color models, however for consistency 
+    it is usually best if your entire project uses the same one! 
+    (I choose hex and rgba)*/
+
+/* Due to overflow, fixing the height of elements with lengths or percentages
+    is something we need to do very carefully on the web. */
+
+/* When you use margin and padding set in percentages, 
+    the value is calculated from the inline size — 
+    therefore the width (of content) when working in a horizontal language. */
+
+/* If we give a block level element a percentage width, 
+ this becomes a percentage of the space it would normally fill. */
+
+/* Setting min-height is very useful for 
+   dealing with variable amounts of content while avoiding overflow. */
+
+/* Setting max-width: 100% is used to make images responsive, 
+so that when viewed on a smaller device they scale down appropriately. 
+You should however not use this technique to load in really large images 
+and then scale them down in the browser. Images should be appropriately sized 
+to be no larger than they need to be for the largest size 
+they are displayed in the design. Downloading overly large images will cause 
+your site to become slow, and it can cost users more money 
+if they are on a metered connection. */
+
+/* Sizing things according to the viewport can be useful in your designs. 
+For example, if you want a full page hero section to show 
+before the rest of your content, making that part of your page 100vh high 
+will push the rest of the content below the viewport, 
+meaning that it will only appear once the document is scrolled. */
+
+/* Post-processing for optimization */
+
+/* Avoid setting the font-size of container elements where possible. */
+
+/* When sizing your text, it is usually a good idea to set the base font-size 
+of the document to 10px, so that then the maths is a lot easier to work out — 
+required (r)em values are then the pixel font size divided by 10, not 16. 
+After doing that, you can easily size the different types of text in your 
+document to what you want. It is a good idea to list all your font-size 
+rulesets in a designated area in your stylesheet, so they are easy to find. */
+
+/* Unitless value of line-height is generally considered the best option */
+
+/* The recommended line height is around 1.5–2 (double spaced.) */
+
+/* LoVe Fears HAte concerning links' (<a>) order */
+
+/* border-bottom property on links (<a>) is better 
+   than text-decoration: underline; */
+
+/* For example, you may set border-bottom: 1px solid; on <a>,
+   the same color as the element's text */
+
+/* Use flexbox and grid for main page layouts */
+
+
+
+
+/* When float give margin to the float element 
+   if you need to take that element away from floated text */
+
+/*  Yes, margins still affect positioned elements. 
+    Margin collapsing doesn't, however. */
+
+/* You can use top, bottom, left, and right 
+   to resize elements if you need to. */
+
+/* A common approach when using Media Queries is to create a simple 
+   single-column layout for narrow-screen devices (e.g mobile phones), 
+   then check for larger screens and implement a multiple column layout 
+   when you know that you have enough screen width to handle it. 
+   This is often described as mobile first design. */
+
+/* By using a flexible grid, you only need to add in a breakpoint 
+   and change the design at the point where the content starts to look bad. */
+
+/* If we know the user cannot hover, we could display some interactive 
+   features by default. For users who can hover, we might choose to make them 
+   available when a link is hovered over. */
+
+/* You can use percentages for width of the element in responsive web design */
+
+/* Browser support doesn't mean "looks the same" */
+
+/* Browser support - If you remove your stylesheet, 
+   does your content make sense? */
+
+/* The float and clear properties cease to affect the layout 
+   if floated or cleared items become flex or grid items. */
+
+/* || GENERAL STYLES */
+
+html {
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 10px;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+header, nav, main, section, article, aside, footer, hgroup {
+  display:block;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+input {
+  -webkit-appearance: none; 
+  appearance: none;
+}
+
+#wrapper {
+	width: 100%;
+	max-width: 1366px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-areas: "header ."
+						 "header ."
+						 "header ."
+						 "header ."
+						 "header ."
+						 "header ."
+						 "header .";
+	/*grid-template-columns: 12.8% auto;*/
+	grid-template-columns: 175px auto;
+}
+
+#wrapper .active {
+	color: #d9be8f;
+	font-weight: bold;
+	text-shadow: 1px 1px 8px #d9be8f, -1px -1px 8px #d9be8f;
+}
+
+/* || FONT-SIZES */
+
+header nav ul li,
+#language li,
+#search_and_account input,
+#recipe_selection > div:first-of-type {
+	font-size: 1.4em;
+}
+
+#recipe_selection_and_ideas h2,
+#recipes h2,
+#hotselection h2,
+#top_authors h2,
+#hotselection div > div > div > div {
+	font-size: 3em;
+}
+
+.main_meal > div > div:first-child,
+#recipes ul li {
+	font-size: 1.6em;
+}
+
+.main_meal > div > div:nth-child(2) {
+	font-size: 3.6em;
+}
+
+#ideas > div:not(.main_meal) > div > div:nth-child(2) {
+	font-size: 1.9em;
+}
+
+footer ul:first-child li {
+	font-size: 1.3em;
+}
+
+/* || HEADER */
+
+header {
+	background-color: #2f3032;
+	grid-area: header;
+	max-width: 175px;
+}
+
+#logo {
+	text-align: center;
+	padding-top: 35px;
+	padding-bottom: 39px;
+}
+
+#logo a {
+	cursor: pointer;
+}
+
+#logo img {
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+/* || MAIN NAVIGATION MENU WITHIN HEADER*/
+
+header nav ul li {
+	cursor: pointer;
+	text-align: center;
+	border-left: 3px solid transparent;
+	line-height: 38px;
+}
+
+header nav ul li:hover {
+	border-left-color: #d9be8f;
+	background-color: #252628;
+}
+
+header nav ul a {
+	color: #efefef;
+	text-transform: uppercase;
+}
+
+#language {
+	margin: 280px 0 25px;
+	display: flex;
+	justify-content: center;
+}
+
+#language li:first-child {
+	margin-right: 8px;
+}
+
+#language li {
+	cursor: pointer;
+}
+
+#language a {
+	color: #efefef;
+	text-transform: uppercase;
+}
+
+#language li:hover a {
+	color: #737373;
+	font-weight: normal;
+	text-shadow: none;
+}
+
+.social_networks {
+	display: flex;
+	justify-content: space-around;
+}
+
+.social_networks li {
+	border-radius: 50%;
+	background: #efefef;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	cursor: pointer;
+}
+
+.social_networks li:hover {
+	box-shadow: 2px 2px 8px 3px #efefef, -2px -2px 8px 3px #efefef;
+}
+
+.social_networks a {
+	margin: auto;
+}
+
+/*.social-networks li:hover {
+	background-color: yellow;
+}*/
+
+/* || OTHER PARTS */
+
+#search_and_account, 
+#recipe_selection_and_ideas,
+#recipes,
+#hotselection,
+#top_authors {
+	background-color: #fcfcfc;
+}
+
+#search_and_account, 
+#recipe_selection_and_ideas,
+#recipes,
+#hotselection,
+#top_authors,
+footer {
+	padding: 0 47px;
+}
+
+#search_and_account {
+	display: flex;
+	justify-content: space-between;
+	min-height: 42px;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 23px;
+}
+
+#search form {
+	width: 514px;
+	height: 60px;
+	position: relative;
+}
+
+#search form div {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	background: #dc143c;
+	border-radius: 50%;
+	transition: all 1s;
+	z-index: 4;
+	box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+}
+
+#search form div::before {
+  	content: "";
+  	position: absolute;
+	top: 22px;
+	bottom: 0;
+	left: 22px;
+	right: 0;
+  	margin: auto;
+  	background-color: #fff;
+  	height: 2px;
+  	width: 12px; 
+  	transform: rotate(45deg);
+  	transition: all 0.5s;
+}
+
+#search form div::after {
+	content: "";
+	position: absolute;
+	top: -5px;
+	bottom: 0;
+	left: -5px;
+	right: 0;
+	margin: auto;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	transition: all 0.5s;
+}
+
+#search form input {
+	font-family: inherit;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	border: none;
+	background-color: #dc143c;
+	color: white;
+	text-shadow: 0 0 10px #dc143c;
+	letter-spacing: 0.1em;
+	border-radius: 30px;
+   box-shadow: 0 0 25px 0 #dc143c, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+   z-index: 5;
+   opacity: 0;
+   cursor: pointer;
+   transition: all 1s;
+}
+
+#search form input:focus {
+	padding: 0 80px 0 20px;;
+	width: 500px;
+	opacity: 1;
+	outline: none;
+	cursor: text;
+}
+
+#search form input:focus ~ div {
+	left: 450px;
+	background: #151515;
+  	z-index: 6;
+}
+
+#search form input:focus ~ div::before {
+	top: 0;
+	left: 0;
+	width: 25px;
+}
+
+#search form input:focus ~ div::after {
+	border: none;
+	border-radius: 0;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	height: 2px;
+	transform: rotate(-45deg);
+}
+
+#search form input::placeholder {
+	color: #fff;
+	opacity: 0.5;
+	font-weight: bolder;
+}
+
+#search_and_account img {
+	vertical-align: bottom;
+}
+
+#account {
+	display: flex;
+	width: 68px;
+	justify-content: space-between;
+	padding-right: 14px;
+}
+
+#account > div {
+	min-height: 18px;
+	display: flex;
+	cursor: pointer;
+}
+
+#account > div:last-child img {
+	margin-bottom: 0;
+	margin-top: auto;
+}
+
+#notification {
+	width: 20px;
+}
+
+#search_and_account > section:last-child > div:last-child {
+	width: 11px;
+}
+
+#notification > img {
+	align-self: flex-end;
+}
+
+#notification > div {
+	width: 5px;
+	height: 5px;
+	background-color: #fe4900;
+	border-radius: 50%;
+}
+
+#recipe_selection_and_ideas > div,
+#recipes > div:first-child,
+#hotselection > div:first-child {
+	display: flex;
+	align-items: center;
+}
+
+#recipe_selection_and_ideas hr,
+#recipes > div > hr,
+#hotselection > div > hr {
+	border: none;
+	color: #cfcfcf;
+	background-color: #cfcfcf;
+	height: 2px;
+	width: 100%;
+}
+
+#recipe_selection_and_ideas > div > img,
+#recipes > div > img,
+#hotselection > div > img {
+	margin: 0 9px;
+}
+
+#recipe_selection_and_ideas h2,
+#recipes h2,
+#hotselection h2,
+#top_authors h2 {
+	text-align: center;
+	text-transform: uppercase;
+	color: #5b5b5b;
+	font-weight: normal;
+	line-height: 2.57;
+}
+
+#recipe_selection {
+	color: #5b5b5b;
+	max-width: 1098px;
+}
+
+#recipe_selection > div:first-of-type {
+	display: flex;
+	justify-content: space-between;
+}
+
+#recipe_selection > div:first-of-type > div:first-child {
+	display: flex;
+	width: 771px;
+}
+
+#recipe_selection > div > div:last-child {
+	display: flex;
+	width: 289px;
+	justify-content: space-between;
+}
+
+#recipe_selection .show-hide-list {
+	position: relative;
+	width: 155px;
+	height: 35px;
+	border: 1px solid #f2f2f2;
+	cursor: pointer;
+}
+
+#recipe_selection .show-hide-list:not(:last-child) {
+	border-right: none;
+}
+
+#recipe_selection .show-hide-list:hover {
+	box-shadow: 0 1px 3px rgba(91, 91, 91, .8);
+}
+
+#ingredients_details-btn {
+	width: 142px;
+	text-align: center;
+	line-height: 33px;
+	border: 1px solid #f2f2f2;
+	cursor: pointer;
+}
+
+#ingredients_details-btn:hover {
+	background: #0302ff;
+	color: #fff;
+}
+
+#pick_recipes-btn {
+	width: 133px;
+	border: 1px solid #d9c9ac;
+	background: #c7b084;
+	text-align: center;
+	line-height: 33px;
+	cursor: pointer;
+}
+
+#pick_recipes-btn:hover {
+	background-color: #f00;
+}
+
+#pick_recipes-btn a {
+	color: #fff;
+}
+
+#recipe_selection > div > div > div > div {
+	padding: 0 11px 0 15px;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#recipe_selection > div > div > div > div::after {
+	content: url(../images/list-arrow.png);
+	margin-bottom: 5px;
+	transition: all .2s;
+}
+
+#recipe_selection > div > div > div > div.rotate::after {
+	transform: rotate(180deg);
+}
+
+.show-hide-list ul {
+	position: absolute;
+	z-index: 2;
+	background-color: #fcfcfc;
+	box-shadow: 0 1px 3px rgba(91, 91, 91, .8);
+	width: 100%;
+	max-height: 170px;
+	overflow-y: auto;
+}
+
+.show-hide-list ul li {
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.show-hide-list ul li:hover {
+	background-color: #0302ff;
+	color: #fff;
+}
+
+.show-hide-list ul.hidden {
+	display: none;
+}
+
+.show-hide-list ul.shown {
+	display: block;
+}
+
+#ideas {
+	display: grid;
+	grid-gap: 10px;
+	gap: 10px;
+	/*grid-template-columns: 267px 267px 267px 267px;*/
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 409px 267px 267px;
+	grid-template-areas: "first first second second"
+						 "third third . . "	
+						 ". . eighth eighth";	
+	margin: 13px 0 20px;
+	justify-content: center;					
+}
+
+#ideas > div {
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+}
+
+#ideas > div:first-child {
+	grid-area: first;
+}
+
+#ideas > div:nth-child(2) {
+	grid-area: second;
+}
+
+#ideas > div:nth-child(3) {
+	grid-area: third;
+}
+
+#ideas > div:last-child {
+	grid-area: eighth;
+}
+
+#ideas > div > div:first-child {
+	position: absolute;
+	z-index: 999;
+}
+
+.main_meal > div:first-child {
+	top: 172px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+#ideas > div:not(.main_meal) > div:first-child {
+	top: 9px;
+}
+
+#ideas > div > div:last-child {
+	width: 100%;
+	height: 100%;
+	background: no-repeat center/cover #000;
+	transition: all .5s;
+}
+
+#ideas > div:hover > div:last-child,
+#ideas > div:focus > div:last-child {
+	transform: scale(1.2);
+}
+
+/*#ideas > div:not(.main-meal) > div {
+	padding: 11px;
+	padding-top: 18px; 
+} */
+
+#ideas > div:first-child > div:last-child {
+	background-image: url(../images/kurinie-nojki-na-grile.png);
+}
+
+#ideas > div:nth-child(2) > div:last-child {
+	background-image: url(../images/7-luchshih-reseptov-nedeli.png);
+}
+
+#ideas > div:nth-child(3) > div:last-child {
+	background-image: url(../images/kak-priqotovit-piroq-v-odnoy-posude-5-reseptov.png);
+}
+
+#ideas > div:nth-child(4) > div:last-child {
+	background-image: url(../images/kak-priqotovit-sirniy-tort-s-ovoschami.png);
+}
+
+#ideas > div:nth-child(5) > div:last-child {
+	background-image: url(../images/10-prostih-napitkov-v-jaru.png);
+}
+
+#ideas > div:nth-child(6) > div:last-child {
+	background-image: url(../images/chto-takoe-myod.png);
+}
+
+#ideas > div:nth-child(7) > div:last-child {
+	background-image: url(../images/kak-pravilno-zamesit-drojevoe-testo.png);
+}
+
+#ideas > div:last-child > div:last-child {
+	background-image: url(../images/chelovek-kotoriy-delaet-luchshie-mitboli-v-belgii.png);
+}
+
+.main_meal > div > div:first-child {
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.main_meal > div > div:nth-child(2) {
+	color: #fff;
+	line-height: 1.2;
+	letter-spacing: 0.001em;
+	text-align: center;
+	background-color: transparent;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.fork_spoon-symbol {
+	margin: 0 auto;
+	display: block;
+}
+
+.healthy {
+	color: #fff;
+	font-size: 1.8em;
+	min-width: 130px;
+	width: 81%;
+	height: 6px;
+	background-color: #2f3032;
+	transition: all .5s;
+	overflow: hidden;
+}
+
+.healthy div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 6px 10px 6px 10px;
+}
+
+#ideas > div:hover .healthy {
+	height: 32px;
+	box-shadow: 1px 1px 5px 5px #fff, -1px -1px 5px 5px#fff;
+}
+
+#ideas > div:not(.main_meal) > div > div:nth-child(2) {
+	color: #333;
+	font-weight: normal;
+	text-transform: uppercase;
+	background-color: #fff;
+	display: inline-block;
+	padding: 10px;
+	transition: all .5s;
+}
+
+#ideas > div:not(.main_meal):hover > div > div:nth-child(2) {
+	opacity: 0;
+}
+
+#recipes .main_section_options {
+	width: 411px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+	background-color: #f1f1f1;
+	border-radius: 12px;
+}
+
+#recipes .main_section_options li {
+	width: 130px;
+	border-radius: 12px;
+	line-height: 35px;
+	text-align: center;
+}
+
+#recipes .main_section_options li:hover {
+	background-color: #2f3032;
+}
+
+#recipes .main_section_options li a {
+	color: #5b5b5b;
+}
+
+#recipes .main_section_options li:hover a {
+	color: #f1f1f1;
+}
+
+#recipes > section > div > div {
+	display: grid;
+	grid-gap: 10px;
+	gap: 10px;
+	grid-template-columns: 1fr 1fr;
+	margin-bottom: 37px;
+}
+
+#recipes > section > div > div > div {
+	width: 543px;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+#recipes img {
+	max-width: 100%;
+}
+
+#recipes > section > div > div > div > div {
+	position: relative;
+	border: 2px solid #f6f6f6;
+	padding-right: 9px;
+}
+
+#recipes h3 {
+	color: #3d3d3d;
+	font-size: 2.1em;
+	font-weight: bold;
+	letter-spacing: -0.04em;
+	line-height: 1;
+	text-align: center;
+	margin-top: 16px;
+	margin-bottom: 26px;
+	margin-left: 9px;
+}
+
+#recipes h3 + div {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 9px;
+}
+
+#recipes h3 + div > div {
+	width: 81px;
+	height: 28px;
+	border: 1px solid #b5904e;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#recipes h3 + div span {
+	color: #b5904e;
+	font-size: 1.4em;
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+#recipes p {
+	color: #5b5b5b;
+	font-size: 1.6em;
+	line-height: 1;
+	letter-spacing: 0.01em;
+	margin-top: 16px;
+	max-height: 96px;
+	margin-left: 9px;
+}
+
+#recipes p + div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid #f6f6f6;
+	padding: 0 25px 0 20px;
+}
+
+#recipes p + div div {
+	display: flex;
+	justify-content: space-between;
+}
+
+#recipes p + div > div:first-child img {
+	cursor: pointer;
+	margin-right: 8px;
+}
+
+#recipes p + div span {
+	color: #9b9b9b;
+	font-size: 1.5em;
+}
+
+#recipes p + div ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#recipes p + div ul li {
+	cursor: pointer;
+}
+
+#recipes p + div ul li:nth-child(2) {
+	margin: 0 20px;
+}
+
+#hotselection > section {
+	overflow: hidden;
+}
+
+#hotselection > section > div {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+}
+
+#hotselection > section > div > div {
+	width: 255px;
+	height: 427px;
+	margin: 0 10px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+}
+
+#hotselection > section > div > div > div:first-child {
+	position: absolute;
+	z-index: 1;
+	bottom: 40px;
+	width: 100%;
+}
+
+#hotselection > section > div > div > div:last-child {
+	width: 100%;
+	height: 100%;
+	background: center/cover no-repeat #000;
+	transition: all .5s;
+}
+
+#hotselection > section > div > div:hover > div:last-child {
+	transform: scale(1.2);
+}
+
+#hotselection > section > div > div > div:last-child::before {
+	content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    transition: all .5s;
+}
+
+#hotselection > section > div > div:hover > div:last-child::before {
+	display: block;
+}
+
+#hotselection > section > div > div:first-child > div:last-child {
+	background-image: url(../images/pohmelnie-resepti.png);
+}
+
+#hotselection > section > div > div:nth-child(2) > div:last-child {
+	background-image: url(../images/maslenitsa.png);
+}
+
+#hotselection > section > div > div:nth-child(3) > div:last-child {
+	background-image: url(../images/resepti-dla-detei.png);
+}
+
+#hotselection > section > div > div:last-child > div:last-child {
+	background-image: url(../images/zdorovoe-pitanie.png);
+}
+
+#hotselection div > div > div > div {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1.2;
+	color: #f0f0f0;
+	font-weight: normal;
+	transition: all .5s;
+}
+
+#hotselection div > div:hover > div > div {
+	text-shadow: 5px 5px 10px, -5px -5px 10px;
+}
+
+#top_authors {
+	padding-bottom: 25px;
+}
+
+#top_authors ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+#top_authors li {
+	width: 53px;
+	height: 53px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#top_authors img {
+	vertical-align: middle;
+}
+
+#subscription {
+	background-color: #e8e8e8;
+	padding: 20px 0 49px;
+}
+
+#subscription form {
+	width: 349px;
+	margin: 0 auto;
+}
+
+#subscription h2 {
+	font-size: 1.4em;
+	color: #252627;
+	text-align: center;
+}
+
+#subscription p {
+	display: flex;
+	margin-top: 14px;
+}
+
+input[type="email"] {
+	font-family: inherit;
+	font-size: 1.4em;
+	width: 319px;
+	padding: 0 17px;
+	border: none;
+}
+
+input[type="email"]:focus {
+	outline: none;
+}
+
+#subscription button {
+	width: 30px;
+	height: 30px;
+	background-color: #2f3032;
+	cursor: pointer;
+	border: none;
+	display: flex;
+}
+
+#subscription button::after {
+	content: url(../images/subscription-button-arrow.png);
+	margin: auto;
+}
+
+#subscription button:hover {
+	background-color: #0302ff;
+}
+
+#subscription button:focus {
+	outline: none;
+}
+ 
+/* || FOOTER */
+
+footer {
+	background-color: #252627;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 19px;
+	padding-bottom: 19px;
+}
+
+footer ul:first-child {
+	display: flex;
+}
+
+footer ul:first-child li:not(:last-child) {
+	margin-right: 25px;
+}
+
+footer ul:first-child a {
+	color: #949494;
+	cursor: pointer;
+}
+
+footer ul:first-child a:hover {
+	color: #efefef;
+}
+
+footer ul:last-child {
+	justify-content: space-between;
+	width: 150px;
+}
+
+/*@media only screen and (max-width: 1365px) {
+	#grid {
+		grid-template-areas: "header"
+							  "."
+							  "."
+							  "."
+							  "."
+							  "."
+							  ".";
+		grid-template-columns: auto;
+	}
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 47px;
+		align-items: center;
+	}
+
+	header nav ul {
+		display: flex;
+	}
+
+	#lang {
+		margin: 0;
+	}*/
+
+/*	#recipe_selection > div:last-child {
+		grid-template-columns: 267px 267px;
+		grid-template-rows: 409px 409px 267px 267px 267px 267px 267px 267px;
+		grid-template-areas: "first first"
+							 "second second"
+							 "third third"
+							 ". ."
+							 ". ."
+							 "eighth eighth";
+	} 
+} */
