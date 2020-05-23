@@ -1,0 +1,235 @@
+main {
+	h3 {
+		font: 600 2rem "Raleway", sans-serif;
+		color: $h-color;
+		text-align: center;
+
+		@include iPad_Pro_1024 {
+			font-size: 3rem;
+		}
+	}
+
+	p {
+		font: 1.4rem/1.5 "Montserrat", sans-serif;
+		color: $p-color;
+		text-align: center;
+
+		@include iPad_Pro_1024 {
+			font-size: 1.6rem;
+			line-height: 1.75;
+		}
+	}
+}
+
+.idea_realization {
+	background-color: #fbfaf8;
+	padding: 4.17% 17.97% 0;
+
+	p {
+		margin: 24px 0 40px;
+	}
+
+	img {
+		max-width: 100%;
+		vertical-align: middle;
+	}
+}
+
+.multipurpose-wordpress {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: linear-gradient(to right, #211b19, #4e3427);
+	padding: 2.5% 19.53%;
+
+    @include laptop_1280 {
+		flex-direction: row;
+    }
+
+	h3 {
+		color: #fff;
+		text-align: left;
+		font-weight: normal;
+
+		span {
+			color: #c7b299;
+		}
+
+		@include iPad_Pro_1024 {
+			font-size: 2.8rem;
+		}		
+	}
+
+	p {
+		font-size: 1.6rem;
+		color: #615855;
+		margin: 0;
+		text-align: left;
+
+		@include iPad_Pro_1024 {
+			font-size: 1.8rem;		
+		}		
+	}
+
+	a {
+		@extend %button;
+		margin-top: 5px;
+	}
+}
+
+.for_mobile {
+	background-color: #fbfaf8;
+	display: flex;
+	padding: 4.11% 10%;
+	justify-content: space-around;
+	align-items: center;
+
+	@include iPad_Pro_1024 {
+		padding: 4.11% 0;
+	}
+
+	@include full_HD_1920 {
+		padding: 4.11% 20.1% 0 22.03%;
+		justify-content: flex-start;
+	} 
+
+	> div:first-child {
+		display: none;
+		width: 25%;
+		
+		@include iPad_Pro_1024 {
+			display: block;
+		}
+
+		@include laptop_1280 {
+			width: auto;
+			margin-right: 30px;
+		}
+
+		img {
+			max-width: 100%;
+			vertical-align: middle;
+		}
+	}
+
+	> div:last-child {
+		width: auto;
+
+		@include iPad_Pro_1024 {
+			width: 59.2%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	h3 {
+		text-align: left;
+	}
+
+	p {
+		text-align: left;
+		margin: 25px 0;
+
+		@include iPad {
+			margin: 40px 0;
+		}
+	}
+
+	ul {
+
+		@include laptop_1280 {
+			margin-left: 7.6%;
+		}
+	}
+
+	li {
+		display: flex;
+		align-items: center;
+		font: 1.4rem/1.8 'Montserrat', sans-serif;
+		color: $p-color; 
+
+		@include iPad_Pro_1024 {
+			font-size: 1.6rem;
+			line-height: 2;
+		}
+
+		div {
+			display: none;
+			width: 18px;
+			height: 18px;
+			margin-right: 29px;
+
+			@include iPad {
+				display: block;
+			}
+
+			@include iPad_Pro_1024 {
+				width: 21px;
+				height: 21px;
+			}
+		}
+	}
+}
+
+.statistics {
+	background: linear-gradient(to right, #211b19, #4e3427);
+	padding: 3.59% 0 3.13%;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+#statistics-grid {
+	@include grid(920px, 150px, 30px 25px);
+
+	@include iPad_Pro_1024 {
+		justify-content: space-between;
+	}
+
+	> div {
+		height: 138px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+
+		@include iPad_Pro_1024 {
+			height: 171px;
+		}
+
+		span {
+			display: block;
+		}
+
+		span:first-child {
+			font-size: 3rem;
+			line-height: 0.75;
+			color: #fff;
+
+			@include iPad_Pro_1024 {
+				font-size: 4.8rem;
+			}
+		}
+
+		span:last-child {
+			font-size: 1.4rem;
+			margin-top: 15px;
+			line-height: 1.43;
+			color: #c7b299;
+			text-transform: uppercase;
+
+			@include iPad_Pro_1024 {
+				margin-top: 21px;
+			}
+		}
+
+		div {
+			width: 30px;
+			height: 2px;
+			background-color: #b9b5b4;
+		}
+	}
+}

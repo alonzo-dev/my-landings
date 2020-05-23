@@ -1,0 +1,42 @@
+@mixin iPad {
+	@media only screen and (min-width: #{$iPad}) {
+		@content;
+	}	
+}
+
+@mixin iPad_Pro_1024 {
+	@media only screen and (min-width: #{$iPad_Pro_1024}) {
+		@content;
+	}
+}
+
+@mixin laptop_1280 {
+	@media only screen and (min-width: #{$laptop_1280}) {
+		@content;
+	}
+}
+
+@mixin laptop_1440 {
+	@media only screen and (min-width: #{$laptop_1440}) {
+		@content;
+	}
+}
+
+@mixin full_HD_1920 {
+	@media only screen and (min-width: #{$full_HD_1920}) {
+		@content;
+	}
+}
+
+@mixin grid($max-width, $col-width, $grid-gap) {
+	max-width: $max-width;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, $col-width);
+	grid-gap: $grid-gap;
+	gap: $grid-gap;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+
+

@@ -1,0 +1,165 @@
+.others {
+	background-color: #191919;
+	padding: 4.17% 2%;
+
+	@include laptop_1280 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+#others-grid {
+	@include grid(1170px, 270px, 30px);
+
+	@include iPad_Pro_1024 {
+		justify-content: space-between;
+	}
+
+	div:first-child h3 {
+		display: flex;
+		align-items: center;
+		margin-top: 0;
+
+		img {
+			max-width: 100%;
+			width: 30%;
+
+			@include iPad_Pro_1024 {
+				width: auto;
+			}
+		}
+
+		span {
+			font: 2.5rem "Raleway", sans-serif;
+			letter-spacing: -0.04em;
+			color: $header_font-color;
+
+			@include iPad_Pro_1024 {
+				font-size: 3.4rem;
+			}
+		}
+	}
+
+	h3 {
+		font: bold 2rem "Raleway", sans-serif;
+		color: #fff;
+		line-height: normal;
+		margin-top: 20px;
+
+		@include iPad_Pro_1024 {
+			font-size: 2.4rem;
+		}
+	}
+
+	h3, h3 + p {
+		margin-bottom: 25px;
+	}
+
+	p {
+		font: 1.4rem/1.71 "Montserrat", sans-serif;
+		color: $h-color;
+	}
+
+	time {
+		font: 1.2rem/1.67 "Montserrat", sans-serif;
+		color: #363636;
+	}
+
+	hr {
+		border: none;
+		background-color: #1d1d1d;
+		color: #1d1d1d;
+		height: 1px;
+	}
+
+	> div:first-child a {
+		font: bold 1.4rem/1.43 "Montserrat", sans-serif;
+		color: #d1d1d1;
+	}
+
+	a span:last-child {
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border: 5px solid transparent;
+		border-left-color: #d1d1d1;
+		margin-left: 10px;
+		vertical-align: middle;
+	}
+
+	a {
+		cursor: pointer;
+	}
+
+	a:hover time {
+		color: #fff;
+	}
+
+	a:hover p {
+		color: #c7b299;
+	}
+
+	a:first-of-type article {
+		margin-bottom: 20px;
+	}
+
+	a:nth-of-type(2) article  {
+		margin: 20px 0;
+	}
+
+	a:last-of-type article {
+		margin-top: 20px;
+	}
+
+	.social_link {
+		color: #00bff3;
+	}
+
+	.disc_link {
+		color: #959595;
+	}
+
+	h3 + div {
+		display: flex;
+		justify-content: space-between;
+		align-content: space-between;
+		flex-wrap: wrap;
+		width: 270px;
+		min-height: 206px;
+
+		div {
+			width: 130px;
+			height: 98px;
+			overflow: hidden;
+		}
+
+		a {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		img[src $= "phones.jpg"] {
+			position: absolute;
+			right: -8%;
+		}
+
+		img[src $= "paper-blog.jpg"] {
+			position: absolute;
+			left: -15%;
+			top: -88%;
+		}
+
+		img[src $= "journal.jpg"] {
+			position: absolute;
+			right: -10%;
+			top: -6%;
+		}
+
+		img[src $= "menu.jpg"] {
+			position: absolute;
+			left: -5%;
+		}
+	}
+}

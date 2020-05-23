@@ -1,0 +1,25 @@
+%flexXBetweenYCenter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+%button {
+	font: 1.4rem 'Raleway', sans-serif;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	width: 170px;
+	height: 50px;
+	background-color: #998675;
+	border-radius: 3px;
+	cursor: pointer;
+	user-select: none;
+	box-shadow: 0 -3px #736357 inset;
+
+	&:hover {
+		background-color: #ab1a07;
+	}
+}

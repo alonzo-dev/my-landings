@@ -1,0 +1,33 @@
+.sponsors {
+	background-color: #000;
+	background-image: url(../../images/sponsors-background.jpg);
+	background-position: 89% 55.95%;
+	background-repeat: no-repeat;
+	padding: 7.29% 0;
+	position: relative;
+	z-index: -3;
+
+	&::before {
+		content: "";
+		display: block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: absolute;
+		background-color: rgba(0, 0, 0, .6);
+		z-index: -2;
+	}
+
+	img {
+		max-width: 100%;
+	}
+}
+
+#sponsors-grid {
+	@include grid(1110px, 212px, 45px 35px);
+
+	@include laptop_1280 {
+		justify-content: space-between;
+	}
+}

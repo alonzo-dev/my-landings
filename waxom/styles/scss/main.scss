@@ -1,0 +1,28 @@
+// use transform3d(px unit is more desirable than %) when animating
+
+@import 'partials/variables',
+		'partials/placeholders', 
+		'partials/mixins';
+
+@import 'default';
+
+body {
+	overflow-x: hidden;
+
+	&.overflow-hidden {
+		overflow: hidden;
+	}
+}
+
+#wrapper {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+@import "header",
+		"work-direction",
+		"main-section",
+		"sponsors-section",
+		"others-section",
+		"footer";

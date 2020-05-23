@@ -1,0 +1,58 @@
+footer {
+	background-color: #111;
+	padding: 2.4% 0 2.71%;
+
+	#footer-grid {
+		@include grid(1170px, 0, 0);
+		grid-template-columns: auto auto;
+		align-items: end;
+		justify-content: space-around;
+
+		@include iPad_Pro_1024 {
+			align-items: start;
+		} 
+
+		@include laptop_1280 {
+			justify-content: space-between;
+		}
+	}
+
+	ul {
+		@include iPad_Pro_1024 {
+			display: flex;
+		} 
+	}
+
+	li {
+		font: 1.3rem/1.5 "Montserrat", sans-serif;
+
+		div {
+			display: none;
+			width: 2px;
+			height: 13px;
+			margin: 0 12px;
+			background-color: #181818;
+
+			@include iPad_Pro_1024 {
+				display: inline-block;
+			} 
+		}
+	}
+
+	span:first-of-type {
+		color: $h-color;
+	}
+
+	span:last-of-type {
+		color: #959595;
+	}
+
+	a {
+		color: $h-color;
+		cursor: pointer;
+
+		&:hover {
+			color: #c7b299;
+		}
+	}
+}
